@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+   <head>
+      <%- include('templates/head1') %>
+
+
+         <title> Index testing </title>
+   </head>
+   <body class="bg-dark">
+      <div class="container-fluid">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">   <!-- nav bar-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/agregpreg">Agregar una pregunta</a>
+                </li>
+              </ul>
+            </div>
+               <a class="nav-link" href="/logout">Log Out</a>
+         </nav>
+         <div class="container-fluid">
+            <div class="row p-3">
+               <div class="col-3"></div>
+               <div class="col-6 bg-secondary p-4">
+                  <div class="row">
+                     <div class="col-5"></div>
+                     <div class="col-2">
+                        <a class="p-1" href="/letsplay"><button type="button" id="btnjugar" class="btn btn-primary btn-lg">¡Jugar!</button></a>          <!-- boton jugar #btnjugar-->
+                     </div>
+                     <div class="col-5"></div>
+                  </div>
+                  <div class="row text-center p-2" style="place-content: center;">
+                     Has click para empezar a jugar.
+                  </div>
+               </div>
+               <div class="col-3"></div>
+            </div>
+         </div>
+         <div class="container-fluid p-2">
+            <nav class="navbar navbar-light bg-dark">
+               <div class="container-fluid">
+                 <a class="navbar-brand"></a>
+                 <form class="d-flex">
+                   <input class="form-control me-2 mr-3" id="buscador" type="text" aria-autocomplete="list" aria-label="Search">
+                   <button class="btn btn-outline-light" id="btnbuscador" type="submit">Search</button>
+                 </form>
+               </div>
+             </nav>
+         </div>
+         <div class="container-fluid bg-dark p-5">
+            <div class="row">
+               <div class="col-2"></div>
+               <div class="col-7 px-5 ml-5">
+                  <table class="table table-primary table-striped">
+                     <thead>
+                        <tr> <th class="pl-4" scope="col-">Nombre</th>     <th scope="col-">Puntaje</th>    <th scope="col-">Porcentaje</th> </tr>
+                     </thead>
+                     <tbody>
+                        <tr> <th class="pl-4" scope="row">Mark</th>        <td>3/3</td>                     <td><%=100%>%</td>               </tr>
+                        <tr> <th class="pl-4" scope="row">Allen</th>       <td>2/3</td>                     <td><%= 66%>%</td>               </tr>
+                        <tr> <th class="pl-4" scope="row">Marie</th>       <td>2/3</td>                     <td><%=66%>%</td>                </tr>
+                        <tr> <th class="pl-4" scope="row">Miriam</th>      <td>2/3</td>                     <td><%=66%>%</td>                </tr>
+                        <tr> <th class="pl-4" scope="row">Allice</th>      <td>1/3</td>                     <td><%=33%>%</td>                </tr>
+                        <tr> <th class="pl-4" scope="row">Guille</th>      <td>1/3</td>                     <td><%=33%>%</td>                </tr>
+                        <tr> <th class="pl-4" scope="row">Olive</th>       <td>1/3</td>                     <td><%=33%>%</td>                </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+          </div>
+      </div>
+      <script type="text/javascript">
+
+      $(document).ready(function () {
+
+         // $('#btnbuscador').on('click',function () { const quebusca = $('#buscador').val();   console.log(quebusca);  });       
+         $('#btnbuscador').on('change', function(){ console.log('esta wea no quiere funcionar');});
+      
+      });
+
+   </script>
+   </body>
+</html>

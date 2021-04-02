@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('templates/head1') %> 
+        <title>Nueva Pregunta</title>
+    </head>
+    <body>
+      <div class="container-fluid">
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">   <!-- nav bar-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/main">Volver</a>
+                </li>
+              </ul>
+            </div>
+               <a class="nav-link" href="/logout">Log Out</a>
+         </nav>
+      </div>
+      <div class="container-fluid bg-dark text-light p-4">
+         <div class="col p-2 px-4"><h1> Nuevas Preguntas </h1></div>
+      </div>
+      <div class="container-fluid p-3">
+         <form action="/nueques" method="post">
+            <div class="row p-2" style="justify-content: center;"><label for="txtar" class="mx-2">Pregunta</label><textarea name="question" class="p-1" id="txtar" cols="30" rows="5" style="width: 700px;" placeholder="No ingrese los singos ¿?, se agregaran automaticamente despues"></textarea></div>
+            <div class="row p-2 ml-1" style="justify-content: center;"><label for="opcor" class="mx-2 ml-5">Respuesta Correcta</label><input name="correct" type="text" id="opcor" style="width:550px;"></div>
+            <div class="row p-2 ml-1" style="justify-content: center;"><label for="opfak" class="mx-2 ml-5">Respuesta erronea</label> <input name="fakes" type="text" id="opfak" style="width:550px;"></div>
+            <div class="row p-2 ml-1" style="justify-content: center;"><label for="opfal" class="mx-2 ml-5">Respuesta erronea</label> <input name="false" type="text" id="opfal" style="width:550px;"></div>
+            <div class="row p-2 ml-1">
+               <div class="col-5"></div>
+               <div class="col-2"><button type="button" id="clear" class="mx-2 px-5 btn btn-secondary">Cancelar</button></div>
+               <div class="col-2"><button type="submit" id="agregar" class="mx-2 px-5 btn btn-success">Agregar</button></div>
+            </div>
+         </form>
+      </div>
+      <script>
+          $(document).ready(function () {
+
+            $('#clear').on('click',function(){
+               $('#txtar').val('');
+               $('#opcor').val('');
+               $('#opfak').val('');
+               $('#opfal').val('');
+            });
+          });
+      </script>
+    </body>
+</html>
